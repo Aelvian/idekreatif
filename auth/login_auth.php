@@ -3,7 +3,7 @@ session_start();
 require_once("../config.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $username = $_POST["uaername"];
+    $username = $_POST["username"];
     $password = $_POST["password"];
 
     $sql = "SELECT * FROM users WHERE username='$username'";

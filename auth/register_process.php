@@ -6,7 +6,7 @@ session_start();
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $username = $_POST['username'];
     $name = $_POST['name'];
-    $password = $password['password'];
+    $password = $_POST['password'];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO users (username, name, password)
