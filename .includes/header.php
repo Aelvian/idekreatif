@@ -9,6 +9,7 @@ include "init_session.php";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css">
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
