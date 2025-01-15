@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 'message' => 'Selamat Datang'
             ];
 
-            header("Location: ../dashboard.php");
+            header('Location: ../dashboard.php');
             exit();
 
         } else {
