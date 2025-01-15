@@ -44,5 +44,9 @@
     <script src="assets/vendor/libs/summernote/summernote.js" defer></script>
     <!-- Active State JS -->
     <script src="assets/js/active-state-nav.js"></script>
+          <!--Import js jQuery and dataTables-->
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.min.js"></script>
 </body>
 </html>
