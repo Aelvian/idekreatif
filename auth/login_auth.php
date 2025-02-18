@@ -2,14 +2,14 @@
 session_start();
 require_once("../config.php");
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    $username =  $_POST["username"];
+    $password =  $_POST["password"];
 
     $sql = "SELECT * FROM users WHERE username='$username'";
     $result = $conn->query($sql);
 
-    if($result->num_rows > 0){
+    if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
 
         if(password_verify($password, $row["password"])) {
@@ -25,17 +25,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             header('Location: ../dashboard.php');
             exit();
-
-        } else {
+        }else{
+           // password
             $_SESSION['notification'] = [
                 'type' => 'danger',
-                'message' => 'Username Atau Password Salah'
-
+                'message' => ' Username Atau Password Salah'
             ];
         }
-        header('Location: login.php');
-        exit();
+    } else {
+        //username3
+        $_SESSION['notification'] = [
+            'type' => 'danger',
+            'message' => 'Username Atau Password Salah'
+        ];
     }
+
+    header('Location: login.php');
+    exit();
 }
 $conn->close();
 ?>

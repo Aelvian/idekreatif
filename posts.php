@@ -4,14 +4,15 @@ include '.includes/header.php';
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row">
         <div class="col-md-10">
-            <div class="card-body">
+           <div class="card-mb-4">
+                 <div class="card-body">
                 <form method="POST" action="proses_post.php" enctype="multipart/form-data">
                    <div class="mb-3">
-                    <label for="post_tittle" class="form-label">Judul Postingan</label>
-                    <input type="text" class="form-control" name="post_tittle" required>
+                    <label for="post_title" class="form-label">Judul Postingan</label>
+                    <input type="text" class="form-control" name="post_title" required>
                    </div>
                    <div class="mb-3">
-                    <label for="formFile" class="form-label">Unggah</label>
+                    <label for="formFile" class="form-label">Unggah Gambar</label>
                     <input class="form-control" type="file" name="image" accept="image/*"/>
                    </div>
                    <div class="mb-3">
@@ -36,9 +37,10 @@ include '.includes/header.php';
                     <textarea  class="form-control" name="content" id="content" required></textarea>
                    </div>
                    <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-                </form>
-            </div>
-        </div>
+                      </form>
+                 </div>
+             </div>
+         </div>
     </div>
 </div>
 <?php
